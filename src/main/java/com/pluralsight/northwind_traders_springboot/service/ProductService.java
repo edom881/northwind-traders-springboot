@@ -25,6 +25,15 @@ public class ProductService {
     public Optional<Product> getProductById(int id) {
         return productRepository.findById(id);
     }
+    //add a new product
+    public Product addProduct(Product product) {
+        return productRepository.save(product);
+    }
+
+    //delete a product
+    public void deleteProductsByID(int productId) {
+        productRepository.deleteById(productId);
+    }
 
 
 }
